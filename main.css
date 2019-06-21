@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|EB+Garamond|Fredericka+the+Great|Tangerine&display=swap");
+
+/* font-family: 'Cormorant Garamond', serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Tangerine', cursive;
+font-family: 'EB Garamond', serif; */
+
+/* background: linear-gradient(
+    rgba(241, 233, 225, 0.3),
+    rgba(241, 233, 225, 0.5)
+  ),
+  url(img/village.jpg) no-repeat center center;
+background-size: cover; */
+
+/* background-color: #f1e9e1; */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2em;
+  background: rgb(250, 250, 250);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --------- Nav-bar --------- */
+
+.nav-bar {
+  background-color: #f1e9e1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  margin: 0.5em;
+}
+
+.logo-title {
+  font-size: 1.5em;
+}
+
+.logo-tagline {
+  display: none;
+  font-family: "Tangerine", cursive;
+  font-size: 1.8em;
+}
+
+.nav-links ul {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-links li {
+  padding: 0.1em 0.2em;
+  margin: 0.2em 1em;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid rgb(136, 108, 71);
+}
+
+@media screen and (min-width: 700px) {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .logo-title {
+    font-family: "Fredericka the Great", cursive;
+    font-size: 3em;
+  }
+
+  .logo-tagline {
+    display: block;
+  }
+
+  nav li {
+    font-size: 1.3em;
+  }
+}
+
+/* --------- Home/About Page --------- */
+
+.main-container {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid purple;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: linear-gradient(
+      rgba(241, 233, 225, 0.3),
+      rgba(241, 233, 225, 0.3)
+    ),
+    url(img/village.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: 1em solid rgb(250, 250, 250);
+}
+
+.text-box {
+  background: rgba(0, 0, 0, 0.561);
+  color: rgb(201, 212, 212);
+  width: 80%;
+  max-width: 1024px;
+  height: auto;
+  padding: 1em;
+}
+
+.text-box-title {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Tangerine", cursive;
+  margin-bottom: 0.4em;
+}
+
+/* --------- Products Page --------- */
+
+.product-bg {
+  background: linear-gradient(
+      rgba(241, 233, 225, 0.3),
+      rgba(241, 233, 225, 0.3)
+    ),
+    url(img/village-store.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: 1em solid rgb(250, 250, 250);
+}
+
+.product-container {
+  background: rgba(235, 233, 230, 0.877);
+  max-width: 1200px;
+  height: auto;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2.7fr 1.3fr;
+  padding: 1em;
+}
+
+.section {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+}
+
+/*  Product  */
+
+.section-title {
+  text-align: center;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
+  border-bottom: 2px solid rgb(182, 175, 175);
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product {
+  border: 2.8px solid rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5em;
+  padding: 0.8em 0.4em;
+  width: 32%;
+}
+
+.product:hover {
+  border: 2.8px solid rgb(182, 175, 175);
+  transition: 0.5s;
+}
+
+.product-name {
+  width: 100%;
+  border-bottom: 2px solid rgb(182, 175, 175);
+  text-align: center;
+}
+
+.product-price::before {
+  content: "$ ";
+}
+
+.product img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+}
+
+.btn {
+  padding: 0.6em 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid rgb(85, 85, 85);
+  color: rgb(70, 62, 62);
+}
+
+:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: rgb(182, 175, 175);
+}
+
+.btn-primary:hover {
+  border: 2px solid rgb(180, 149, 99);
+  transition: 0.3s;
+  background: none;
+}
+
+/* Cart */
+
+.cart {
+  font-style: italic;
+  font-weight: lighter;
+  display: grid;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 2em 2em 5em auto 0.2em auto auto;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px dashed rgb(148, 142, 142);
+}
+
+.cart-item-image {
+  width: 40px;
+  height: 40px;
+}
+
+.cart-item-name {
+  font-size: 0.8em;
+}
+
+.cart-item-price::before {
+  content: "$ ";
+}
+
+.btn-small {
+  padding: 0.2em 0.6em;
+}
+
+.cart-footer {
+  text-align: center;
+}
+
+.cart-footer-total {
+  font-size: 1.2em;
+}
+
+.cart-footer-total::before {
+  content: "Total: $ ";
+}
+
+@media screen and (max-width: 800px) {
+  .product-container {
+    grid-template-columns: 300px;
+    grid-template-rows: auto;
+    padding: 1em;
+  }
+
+  .product {
+    width: 90%;
+  }
+
+  .product img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+  }
+
+  .cart-item {
+    /* display: grid;
+    grid-template-columns: 2em 2em 5em auto 0.2em auto auto;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px dashed rgb(148, 142, 142); */
+    grid-template-columns: 2em 4em auto 0.2em auto auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .cart-item-image {
+    display: none;
+  }
+
+  .cart-item-name {
+    font-size: 1em;
+  }
+}
